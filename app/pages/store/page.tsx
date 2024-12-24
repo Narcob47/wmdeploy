@@ -20,7 +20,7 @@ const Store = () => {
   // Filter books by selected category
   const filteredBooks = category === "All"
     ? books
-    : books.filter((book) => book.category === category);
+    : books.filter((book) => book.category.toString() === category);
 
   // Get unique categories for the filter dropdown
   const categories = ["All", ...new Set(books.map((book) => book.category))];
@@ -39,7 +39,7 @@ const Store = () => {
             <select
               id="category-filter"
               value={category}
-              onChange={(e) => setCategory(e.target.value)}
+              onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setCategory(e.target.value)}
               className="border border-gray-300 rounded-md p-2 text-black"
             >
               {categories.map((cat) => (
