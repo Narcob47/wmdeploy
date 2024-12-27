@@ -7,7 +7,8 @@ const AboutHeader: React.FC = () => {
         About Us
       </h1>
       <p className="mt-4 text-lg text-gray-600">
-        At <span className="font-bold text-red-600">Watchman Missionary Society</span>, we believe in the transformative power of books, ideas, and education. Our mission is rooted in <strong>Analysis, Research, and Problem Solving</strong>, aiming to empower minds and inspire positive change.
+        The <span className="font-bold text-red-600">Watchman Missionary Society</span>is a supporting ministry of the Seventh-day Adventist Church devoted to proclaiming the Three Angels’ Message in its most holistic sense.
+
       </p>
     </header>
   );

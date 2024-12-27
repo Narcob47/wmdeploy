@@ -16,7 +16,7 @@ const WhoWeAre: React.FC = () => {
       <div className="w-full sm:w-1/2">
         <h2 className="text-2xl font-semibold text-gray-800">Who We Are</h2>
         <p className="mt-2 text-gray-600">
-          We are a community of passionate educators, learners, and creators, dedicated to promoting knowledge through curated resources and training programs.
+        The Watchman Missionary Society is a supporting ministry of the Seventh-day Adventist Church devoted to proclaiming the Three Angels’ Message in its most holistic sense.
         </p>
       </div>
     </div>

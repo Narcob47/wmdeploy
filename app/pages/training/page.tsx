@@ -1,10 +1,13 @@
+import Header from '@/app/components/Header'
+import TrainerContainer from '@/app/components/Training/TrainerContainer'
 import React from 'react'
 
 const Training = () => {
   return (
-    <div>
-      <h1>This is a training page</h1>
-    </div>
+    <>
+    <Header/>
+    <TrainerContainer/>
+    </>
   )
 }
 

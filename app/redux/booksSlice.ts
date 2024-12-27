@@ -1,7 +1,9 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-// import { JSX } from 'react';
+import axios from 'axios';
 
 interface Book {
+  published_date: string | number | Date;
+  format: string;
   id: number;
   title: string;
   author: string;
@@ -25,12 +27,23 @@ const initialState: BooksState = {
 
 // Define the fetchBooks thunk
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/books/`); // Use the API URL from .env
-  if (!response.ok) {
-    throw new Error('Failed to fetch books');
-  }
-  const data = await response.json();
-  return data as Book[];
+  const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/books/`); // Use the API URL from .env
+  return response.data as Book[];
+});
+
+// Define the downloadBook thunk
+export const downloadBook = createAsyncThunk('books/downloadBook', async (bookId: number) => {
+  const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/books/${bookId}/download`, {
+    responseType: 'blob',
+  });
+  const url = window.URL.createObjectURL(new Blob([response.data]));
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', `book_${bookId}.pdf`); // Assuming the book is in PDF format
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.URL.revokeObjectURL(url);
 });
 
 const booksSlice = createSlice({
@@ -53,6 +66,16 @@ const booksSlice = createSlice({
       .addCase(fetchBooks.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message || 'Failed to fetch books';
+      })
+      .addCase(downloadBook.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(downloadBook.fulfilled, (state) => {
+        state.status = 'succeeded';
+      })
+      .addCase(downloadBook.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message || 'Failed to download book';
       });
   },
 });

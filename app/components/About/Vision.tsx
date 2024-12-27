@@ -16,7 +16,7 @@ const Vision: React.FC = () => {
       <div className="w-full sm:w-1/2">
         <h2 className="text-2xl font-semibold text-gray-800">Our Vision</h2>
         <p className="mt-2 text-gray-600">
-          To create a world where knowledge is not just a tool but a catalyst for transformation.
+        The Society is dedicated to training and supporting missionaries to serve in the mission field, focusing on both pioneering efforts and nurturing the Church of God in various parts of Zambia and around the world. Through its mission, the Watchman Missionary Society seeks to advance God’s kingdom in a practical and transformative way.
         </p>
       </div>
     </div>

@@ -3,7 +3,7 @@ import AboutHeader from "../../components/About/AboutHeader";
 import WhoWeAre from "../../components/About/WhoWeAre";
 import WhatWeDo from "../../components/About/WhatWeDo";
 import Vision from "../../components/About/Vision";
-import WhyChooseUs from "../../components/About/WhyChooseUs";
+// import WhyChooseUs from "../../components/About/WhyChooseUs";
 // import AboutFooter from "../../components/About/AboutFooter";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -16,7 +16,7 @@ const About = () => {
         <WhoWeAre />
         <WhatWeDo />
         <Vision />
-        <WhyChooseUs />
+        {/* <WhyChooseUs /> */}
         <Footer/>
     </div>
   );
