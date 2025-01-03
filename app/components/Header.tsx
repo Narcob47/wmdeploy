@@ -23,7 +23,7 @@ const Header = () => {
         </Button>
       </div>
       <nav className={`lg:flex lg:items-center lg:space-x-6 text-black ${isOpen ? 'absolute top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center space-y-8' : 'hidden'}`}>
-        <div className="flex items-center justify-between w-full px-4">
+        <div className="lg:hidden md:hidden flex items-center justify-between w-full px-4">
           <Link href="/">
             <Image src="/assets/logo-2.png" alt="Book Illustration" width={24} height={24} className="w-6 h-6 rounded-md" priority />
           </Link>
