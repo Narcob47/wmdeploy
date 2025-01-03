@@ -7,14 +7,14 @@ const ContactDetails: React.FC = () => {
       <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
       <ul className="space-y-4">
         <li>
-          <strong>Email:</strong> contact@yourwebsite.com
+          <strong>Email:</strong> watchmanmissionsociety@gmail.com
         </li>
         <li>
-          <strong>Phone:</strong> +1 (123) 456-7890
+          <strong>Phone:</strong> +260 97 521 282 6
         </li>
-        <li>
+        {/* <li>
           <strong>Address:</strong> 123 Your Street, Your City, Your Country
-        </li>
+        </li> */}
         <li>
           <strong>Working Hours:</strong> Mon - Fri: 9:00 AM - 5:00 PM
         </li>
