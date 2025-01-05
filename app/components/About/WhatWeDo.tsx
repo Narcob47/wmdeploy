@@ -19,7 +19,7 @@ const WhatWeDo: React.FC = () => {
       <div className="w-full sm:w-1/2">
         <h2 className="text-2xl font-semibold text-gray-800">What We Do</h2>
         <ul className="mt-2 text-gray-600 list-disc list-inside">
-          <li>It strives to comprehensively address all dimensions of the message, including health, benevolence, literature, evangelism, education, family, and country living.</li>
+          <li>We strive to comprehensively address all dimensions of the message, including health, benevolence, literature, evangelism, education, family, and country living.</li>
         </ul>
       </div>
     </div>
