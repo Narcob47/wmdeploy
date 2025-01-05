@@ -6,8 +6,7 @@ const About = () => {
     <section className="py-16 text-center ">
       <h2 style={{ color: COLORS.black }} className="text-3xl font-semibold">About The Watchman Missionary Society</h2>
       <p style={{ color: COLORS.black }} className="mt-4 max-w-xl mx-auto">
-      The Watchman Missionary Society is a supporting ministry of the Seventh-day Adventist Church devoted to proclaiming the Three Angels’ Message in its most holistic sense.
-
+      The society is dedicated to training and supporting missionaries to serve in the mission field, focusing on both pioneering efforts and nurturing the Church of God in various parts of Zambia and around the world.
       </p>
       <div className="mt-8 flex justify-center">
         <Image 
