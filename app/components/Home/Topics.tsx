@@ -3,7 +3,7 @@ import { COLORS } from '../../constants/colors';
 const Topics = () => {
   return (
     <section className="py-16 text-center">
-      <h2 style={{ color: COLORS.black }} className="text-3xl font-semibold">What’s Our Books Are About</h2>
+      <h2 style={{ color: COLORS.black }} className="text-3xl font-semibold">What our Books are aboutt</h2>
       <p style={{ color: COLORS.black }} className=" mt-4 max-w-xl mx-auto"></p>
       <div className="mt-8 grid grid-cols-2 gap-4 max-w-xl mx-auto">
         {['Holistic Ministry', 'Service', 'Health and Wellness', 'Education', 'Family Values', 'Diligent Study', 'SOP', 'Pioneers' ].map((topic, i) => (
